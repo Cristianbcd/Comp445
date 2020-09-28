@@ -8,13 +8,14 @@ import java.net.MalformedURLException;
 public class Httpc {
 	
 	public static void main(String[] args) throws MalformedURLException  {
-		//getExample();
+		getExample();
+
 		//post1Example();
 		//post2Example();
 		//post3Example();
 		//getRedirectExample();
 
-
+		/*
 		System.out.println("Exercise 1:\nCommand line input:\n");
 
 		for(int i = 0; i < args.length; i++){
@@ -58,6 +59,7 @@ public class Httpc {
 		System.out.println("File: " + url3.getFile());
 		System.out.println("Protocol: " + url3.getProtocol());
 		System.out.println("Query: " + url3.getQuery() + "\n");
+		*/
 	}
 
 	public static void httpc(String path, String host, String query) {
@@ -99,12 +101,12 @@ public class Httpc {
 
 	public static void getExample() {
 		try {
-			Socket socket = new Socket("httpbin.org", 80);
+			Socket socket = new Socket("2cbe98bfc038.ngrok.io", 80);
 			
 			InputStream inputStream = socket.getInputStream();
 			OutputStream outputStream = socket.getOutputStream();
 			
-			String request = "GET " +  "/status/418 HTTP/1.0\r\n\r\n";
+			String request = "GET " +  "/get HTTP/1.0\r\nHost: 2cbe98bfc038.ngrok.io\r\n\r\n";
 			
 			//http://postman-echo.com:100/wikypedia/article/1?key=value
 
